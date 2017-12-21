@@ -1,0 +1,26 @@
+{
+  "name": "mask-utils",
+  "version": "0.0.1",
+  "description": "An NPM package that exports functions to mask values.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kschluter/mask-utils.git"
+  },
+  "keywords": [
+    "npm",
+    "node",
+    "masks",
+    "mask utils",
+    "javascript"
+  ],
+  "author": "Kory Schluter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kschluter/mask-utils/issues"
+  },
+  "homepage": "https://github.com/kschluter/mask-utils#readme"
+}
