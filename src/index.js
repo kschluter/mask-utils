@@ -21,7 +21,7 @@ export function maskUSPhone(phone) {
 export function maskUSZipCode(zipcode) {
   if (!zipcode || typeof zipcode !== 'string') {
     return null;
-  }  
+  }
   if (zipcode.length <= 5) {
     return zipcode;
   }
