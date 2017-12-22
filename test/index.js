@@ -1,7 +1,7 @@
 import * as assert from 'assert';
-import maskUSPhone from '../src/index';
+import { maskUSPhone, maskUSZipCode } from '../src/index';
 
-const testSamples = [
+const USPhoneTestSamples = [
   { input: null, expectedResult: null, description: 'should return null when null is passed' },
   { input: undefined, expectedResult: null, description: 'should return null when undefined is passed' },
   { input: 'abc', expectedResult: 'abc', description: 'should return pristine value when receiving "abc"' },
@@ -11,10 +11,27 @@ const testSamples = [
   { input: '5431260987', expectedResult: '(543) 126-0987', description: 'should return (543) 126-0987' },
 ];
 
-describe('Array', () => {
-  testSamples.forEach((sample) => {
+const USZipCodeTestSamples = [
+  { input: null, expectedResult: null, description: 'should return null when null is passed' },
+  { input: undefined, expectedResult: null, description: 'should return null when undefined is passed' },
+  { input: '92563', expectedResult: '92563', description: 'should return pristine value when receiving 92563'},
+  { input: '925630001', expectedResult: '92563-0001', description: 'should return 92563-0001'},
+]
+
+// Test US Phone Numbers
+describe('US Phone Numbers', () => {
+  USPhoneTestSamples.forEach((sample) => {
     it(sample.description, () => {
       assert.equal(maskUSPhone(sample.input), sample.expectedResult);
+    });
+  });
+});
+
+// Test US Zip Codes
+describe('US Zip Codes', () => {
+  USZipCodeTestSamples.forEach((sample) => {
+    it(sample.description, () => {
+      assert.equal(maskUSZipCode(sample.input), sample.expectedResult);
     });
   });
 });
