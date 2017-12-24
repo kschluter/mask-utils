@@ -13,5 +13,5 @@ An NPM package that exports functions to mask values.
     // Mask US Zip Code
     maskUtils.maskUSZipCode('925630001') //=> 92563-0001
 
-# Liscense
+# License
 MIT
